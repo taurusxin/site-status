@@ -16,7 +16,7 @@
     </n-flex>
     <n-flex :size="4" class="text" align="center" vertical>
       <n-p depth="3">
-        <n-text depth="3" @click="jumpLink(linkData.github)">SiteStatus</n-text>
+        <n-text depth="3" @click="jumpLink(siteStatusRepo)">SiteStatus</n-text>
         Version {{ version }}
       </n-p>
       <n-p depth="3">
@@ -38,6 +38,8 @@
 <script setup lang="ts">
 const { public: configPublic } = useRuntimeConfig();
 const { siteIcp, version } = configPublic;
+
+const siteStatusRepo = "https://github.com/taurusxin/site-status"
 
 const linkData = {
   github: "https://github.com/taurusxin",
